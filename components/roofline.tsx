@@ -25,7 +25,7 @@ function Countdown(){
  const parts=seconds===null?['—','—','—','—']:[Math.floor(seconds/86400),Math.floor(seconds/3600)%24,Math.floor(seconds/60)%60,seconds%60].map(x=>String(x).padStart(2,'0'));
  return <aside className="demo-bar" aria-label="Seven-day website demo"><span className="demo-copy"><span className="demo-tag">WEBSITE PREVIEW</span><span>Just a demo · Available for 7 days</span></span>{remaining===0?<strong className="expired">This preview has expired.</strong>:<div className="countdown" role="timer" aria-label="Time remaining in the seven-day demo">{parts.map((v,i)=><span className="time-part" key={i}><b>{v}</b><span>{['Days','Hours','Minutes','Seconds'][i]}</span>{i<3&&<i>:</i>}</span>)}</div>}</aside>;
 }
-function Logo(){return <a href="/" className="wordmark" aria-label="BSS Roofing home"><svg aria-hidden="true" width="39" height="37" viewBox="0 0 42 40"><path d="M2 22 21 5l19 17M8 28 21 16l13 12M15 34h12" stroke="currentColor" strokeWidth="2" fill="none"/></svg><span>COTHAM ROOFING<small>LIMITED · ROOFING SPECIALISTS</small></span></a>;}
+function Logo(){return <a href="/" className="wordmark" aria-label="BSS Roofing home"><svg aria-hidden="true" width="39" height="37" viewBox="0 0 42 40"><path d="M2 22 21 5l19 17M8 28 21 16l13 12M15 34h12" stroke="currentColor" strokeWidth="2" fill="none"/></svg><span>BSS ROOFING<small>ROOFING SPECIALISTS</small></span></a>;}
 function Header(){
  const [scrolled,setScrolled]=useState(false);const [open,setOpen]=useState(false);
  useEffect(()=>{const update=()=>setScrolled(window.scrollY>60);update();window.addEventListener('scroll',update,{passive:true});return()=>window.removeEventListener('scroll',update);},[]);
