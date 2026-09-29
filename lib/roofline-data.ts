@@ -3,7 +3,7 @@ export const business = {
   phone: '+44 7575 217245',
   tel: 'tel:+447575217245',
   area: '374 Wexham Rd',
-  reviews: 'Not Verified'
+  reviews: 45
 };
 
 export const services = [
